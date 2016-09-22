@@ -184,4 +184,11 @@
 •	Also you can store scores or explanations.
 Warning: there shouldn’t be any aggregation logic used</modelComment>
 
+
+
+<modelComment bounds="576,312,241,121" borderColor="183,183,0" backgroundColor="255,255,180" foregroundColor="51,51,51">TODO:
+
+neco neco
+</modelComment>
+
 </purity-config>
