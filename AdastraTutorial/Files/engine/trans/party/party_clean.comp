@@ -35,6 +35,30 @@
 	</step>
 	<connection className="com.ataccama.dqc.model.elements.connections.StandardFlowConnection" disabled="false">
 		<source step="RC Validator CZ" endpoint="out"/>
+		<target step="Validate IC CZ" endpoint="in"/>
+		<visual-constraints>
+			<bendpoints/>
+		</visual-constraints>
+	</connection>
+
+
+
+<!-- (Validate IC CZ) --><step id="Validate IC CZ" className="com.ataccama.dqc.tasks.clean.ValidateICAlgorithm" disabled="false" mode="NORMAL">
+		<properties omitInvalidIC="true" preserveInputValue="false" allowCleaning="true" in="src_rod_cis" out="cio_rod_cis">
+			<scorer>
+				<scoringEntries>
+					<scoringEntry score="0" explainAs="IC_NULL" explain="true" key="IC_NULL"/>
+					<scoringEntry score="0" explainAs="IC_BAD_FORMAT" explain="true" key="IC_BAD_FORMAT"/>
+					<scoringEntry score="0" explainAs="IC_BAD_CHECKSUM" explain="true" key="IC_BAD_CHECKSUM"/>
+					<scoringEntry score="0" explainAs="IC_CLEANED" explain="true" key="IC_CLEANED"/>
+					<scoringEntry score="0" explainAs="IC_NORMALIZED" explain="true" key="IC_NORMALIZED"/>
+				</scoringEntries>
+			</scorer>
+		</properties>
+		<visual-constraints bounds="336,432,-1,-1" layout="vertical"/>
+	</step>
+	<connection className="com.ataccama.dqc.model.elements.connections.StandardFlowConnection" disabled="false">
+		<source step="Validate IC CZ" endpoint="out"/>
 		<target step="counter_party_clean_out" endpoint="in"/>
 		<visual-constraints>
 			<bendpoints/>
