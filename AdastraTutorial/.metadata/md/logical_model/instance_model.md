@@ -168,7 +168,7 @@
 				<oldValueColumns/>
 			</advanced>
 		</table>
-		<table name="Ucet" elemId="5653" type="instance">
+		<table name="UCET" elemId="5653" type="instance">
 			<description></description>
 			<columns>
 				<column isPk="true" label="" isSco="false" type="string" size="200" isFk="false" refData="" isSrc="false" isExp="false" name="source_id" elemId="5760" isStd="false" isCio="false">
